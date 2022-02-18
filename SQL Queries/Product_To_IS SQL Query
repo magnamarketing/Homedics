@@ -1,0 +1,11 @@
+
+SELECT
+ProductSku AS id,
+Name AS [attribute:name],
+CONCAT('https://www.homedics.com', ProductURL) AS [attribute:url],
+ImageUrl AS [attribute:imageUrl],
+Price AS [attribute:price],
+Inventory AS [attribute:inventoryCount],
+REPLACE(Category, ',', '|') AS categories,
+REPLACE(Description, ',', '|') AS [attribute:description]
+FROM [BCProductDE-jelmg7hxh0]
